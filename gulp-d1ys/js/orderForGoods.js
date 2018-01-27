@@ -77,7 +77,7 @@ define(["jquery"  , "jquery-cookie"] , ($) =>{
 						let sc_str = $.cookie("goods");
 						//let arr = eval($.cookie("goods"));
 						let arr = eval($.cookie("goods"));
-						alert(arr[3].num);
+						
 						let id = this.id;
 						
 						if($(this).html() == "+"){
@@ -85,17 +85,39 @@ define(["jquery"  , "jquery-cookie"] , ($) =>{
 							//$(".orderInput").val(arr[id].num)
 						}else if($(this).html() == "-"){
 							arr[id].num -= 1;
-							if(arr[id].num < 0){
+							if(arr[id].num <= 0){
 								
-								arr[id].num = 0;
+								arr.splice(id , 1);
+							//$.cookie("goods",null);
+							/*if(arr.length == 1){
+								arr.splice(0 , 1);
+							}*/
+							
+
+								let cookieStr1 = JSON.stringify(arr);
+								$.cookie("goods", cookieStr1, {
+									expires: 7
+								});
 							}
 						}else if($(this).html() == "删除"){
+
 							arr[id].num = 0;
+							arr.splice(id , 1);
+							//$.cookie("goods",null);
+							/*if(arr.length == 1){
+								arr.splice(0 , 1);
+							}*/
+							
+
+							let cookieStr1 = JSON.stringify(arr);
+							$.cookie("goods", cookieStr1, {
+								expires: 7
+							});
 							
 							/*for(let i = 0 ; i < arr.length ; i++){
 								if(arr[i].id == id){
 									
-									//arr.splice(i , 1);
+									arr.splice(i , 1);
 								}
 							}*/
 							/*if(arr[id].num == 0;){
@@ -108,9 +130,11 @@ define(["jquery"  , "jquery-cookie"] , ($) =>{
 						}*/
 
 
+						if(arr[id]){
+							$(this).siblings("input").val(arr[id].num);
+						}
 
-
-						$(this).siblings("input").val(arr[id].num);
+						//$(this).siblings("input").val(arr[id].num);
 						if(sc_str){
 							let sum = 0;
 							for(let i in arr){

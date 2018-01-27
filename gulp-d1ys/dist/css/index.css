@@ -294,8 +294,9 @@ a {
   width: 1280px; }
 
 #slide #slide_ul2 img {
-  width: 1280px;
+  width: 1920px;
   height: 400px;
+  margin-left: -300px;
   display: block;
   border: none;
   float: left; }
@@ -317,7 +318,8 @@ a {
   text-align: center;
   background: black;
   border-radius: 10px;
-  color: white; }
+  color: white;
+  cursor: pointer; }
 
 #slide #slide_ul1 .active {
   background: red; }
