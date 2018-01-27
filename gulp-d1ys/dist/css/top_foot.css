@@ -1,0 +1,357 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+/* top1=============== */
+#top1 {
+  position: relative;
+  widows: 1280px;
+  height: 30px;
+  background: #f7f7f7; }
+
+#top1 .div3 {
+  top: 13px;
+  left: 850px;
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: red; }
+
+#top1 .div3 img {
+  display: block; }
+
+#top1 #div1 {
+  float: left;
+  margin-top: 2px;
+  font-size: 11px;
+  color: #222222; }
+
+#top1 #div1 a {
+  text-decoration: none;
+  color: #8cc341; }
+
+#top1 #ul1 {
+  float: right;
+  overflow: hidden; }
+
+#top1 #ul1 li {
+  float: left;
+  list-style: none;
+  width: 80px;
+  display: block; }
+
+#top1 #ul1 li a {
+  font-size: 11px;
+  color: #79797b;
+  text-decoration: none; }
+
+#top1 #ul2 {
+  position: absolute;
+  top: 18px;
+  left: 790px;
+  width: 80px;
+  height: 150px;
+  border: 1px solid #bfbfbf;
+  background: #efeff1;
+  display: none;
+  z-index: 2; }
+
+#top1 #ul2 li {
+  list-style: none;
+  height: 25px;
+  margin-left: 10px; }
+
+#top1 #ul2 li a {
+  font-size: 11px;
+  color: #79797b;
+  text-decoration: none; }
+
+#top1 #div4 img {
+  width: 75px;
+  height: 75px;
+  border: 1px solid #cccccc;
+  float: left; }
+
+#top1 #div4 p {
+  margin-top: 10px;
+  font-size: 11px; }
+
+#top1 #div4 .p1 {
+  color: #f0414e; }
+
+#top1 #div4 {
+  border: 1px solid #cccccc;
+  position: absolute;
+  left: 1125px;
+  top: 30px;
+  display: none;
+  background: white;
+  z-index: 2; }
+
+#top1 #div4 .div11, .div12, .div13 {
+  overflow: hidden;
+  padding: 10px;
+  border-bottom: 1px solid #cccccc; }
+
+#top1 #div4 .div11 div {
+  float: left; }
+
+#top1 #div4 .div12 div {
+  float: left; }
+
+#top1 #div4 .div13 div {
+  float: left; }
+
+/* list_top2      头部二 */
+#list_top2 {
+  width: 1010px;
+  padding-top: 25px;
+  margin: 0 auto;
+  overflow: hidden; }
+  #list_top2 #div1 {
+    float: left; }
+  #list_top2 #ul1 {
+    margin-top: 27px;
+    float: left;
+    margin-right: 5px; }
+    #list_top2 #ul1 li {
+      float: left;
+      margin-left: 20px; }
+      #list_top2 #ul1 li a {
+        color: #999999;
+        font-size: 15px; }
+  #list_top2 #div2 {
+    border: 2px solid #f0414e;
+    float: left;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-left: 20px; }
+    #list_top2 #div2 input {
+      float: left;
+      height: 32px;
+      width: 250px;
+      border: none; }
+    #list_top2 #div2 p {
+      float: left;
+      width: 76px;
+      height: 32px;
+      background: #f0414e;
+      color: white;
+      line-height: 32px;
+      text-align: center; }
+  #list_top2 .shoping_card_div4 {
+    float: left;
+    margin-top: 20px;
+    overflow: hidden;
+    margin-left: 5px; }
+    #list_top2 .shoping_card_div4 img {
+      float: left;
+      display: block; }
+    #list_top2 .shoping_card_div4 div {
+      float: left;
+      width: 108px;
+      height: 33px;
+      line-height: 33px;
+      border: 1px solid #dddddd;
+      background: #f6f6f6;
+      font-size: 12px;
+      color: #4b4b4b; }
+      #list_top2 .shoping_card_div4 div span {
+        color: red; }
+
+/* top2=============================== */
+/* #top2{
+	width: 1280px;
+	overflow: hidden;
+	background: #ffffff;
+	padding-top: 27px;
+	margin:0 auto;
+	padding-bottom:20px;
+	border:1px solid red;
+	
+}
+
+#top2 #ul1{
+	float:left;
+	
+	overflow:hidden;
+	margin-left:30px;
+	margin-top:25px;
+}
+#top2 #ul1 li{
+	float:left;
+	padding-right:20px;
+	list-style:none;
+	
+}
+#top2 #ul1 li:hover a{
+	color:red;
+
+}
+#top2 #ul1 li a{
+	text-decoration:none;
+	font-size:15px;
+	color:#999999;
+	
+}
+
+
+
+
+#top2 #div1{
+	float:left;
+	
+}
+#top2 #div1 img{
+	display:block;
+}
+
+#top2 #div2{
+	float:left; 
+	margin-top:20px;
+	height:32px;
+	width:326px;
+	border:2px solid #f0414e;
+	overflow:hidden;
+
+}
+#top2 #div2 input{
+	display:block;
+	width:250px;
+	height:32px;
+	float:left;
+	border:none;
+}
+#top2 #div2 input:nth-of-type(2){
+	float:left;
+	width:76px;
+	height:32px;
+}
+#top2 #div2 p{
+	display:block;
+	float:left;
+	width:76px;
+	height:32px;
+	background:#f0414e;
+	text-align:center;
+	line-height:32px;
+	font-size:16px;
+	color:white;
+}
+
+#top2 #div3{
+	float:left;
+	margin-left:77px;
+}
+#top2 #shoping_card1_div4{
+	float:left;
+	margin-left:50px;
+	border: 1px solid #e9e9e9;
+	margin-top:20px;
+	width:124px;
+	height:35px;
+	overflow:hidden;
+}
+#top2 #shoping_card1_div4 div{
+	width:84px;
+	height:33px;
+	float:right;
+	background:#fefefe;
+	font-size:12px;
+	color:#222222;
+	text-align:center;
+	line-height:33px;
+}
+#top2 #shoping_card1_div4 div span{
+	color:red;
+} */
+/* foot    尾部 */
+#foot {
+  width: 1172px;
+  margin: auto;
+  height: 430px;
+  padding-top: 18px;
+  padding-left: 108px; }
+
+#foot #foot_boxs {
+  width: 1050px; }
+
+#foot #foot_boxs #foot_box1 {
+  width: 1050px;
+  height: 90px;
+  border-top: 1px solid #dddddd; }
+
+#foot #foot_boxs #foot_box2 {
+  overflow: hidden;
+  padding-top: 30px;
+  padding-bottom: 27px;
+  border-bottom: 1px solid #dddddd; }
+
+#foot #foot_boxs #foot_box2 ul {
+  float: left;
+  margin-left: 34px; }
+
+#foot #foot_boxs #foot_box2 ul li {
+  height: 24px;
+  line-height: 24px; }
+
+#foot #foot_boxs #foot_box2 ul li a {
+  font-size: 11px;
+  color: #a08181; }
+
+#foot #foot_boxs #foot_box2 ul .foot_li1 a {
+  font-size: 12px;
+  color: #602222;
+  font-weight: 600; }
+
+#foot #foot_boxs #foot_box2 ul li a:hover {
+  color: #ff1f47; }
+
+#foot #foot_boxs #foot_box2 div {
+  float: left;
+  margin-left: 60px; }
+
+#foot #foot_boxs #foot_box2 div img {
+  width: 88px;
+  height: 88px;
+  display: block;
+  margin-left: 10px; }
+
+#foot #foot_boxs #foot_box2 div p {
+  font-size: 12px;
+  color: #868686;
+  margin-top: 18px; }
+
+#foot #foot_boxs #foot_box3 {
+  padding-top: 28px; }
+
+#foot #foot_boxs #foot_box3 ul {
+  overflow: hidden;
+  margin-left: 40px; }
+
+#foot #foot_boxs #foot_box3 ul li {
+  float: left;
+  width: 60px;
+  text-align: center;
+  border-right: 1px solid #222222; }
+
+#foot #foot_boxs #foot_box3 ul li a {
+  font-size: 11px;
+  color: #222222; }
+
+#foot #foot_boxs #foot_box3 ul li a:hover {
+  color: #aa5e5e; }
+
+#foot #foot_boxs #foot_box3 ul .li2 {
+  border-right: none; }
+
+#foot #foot_boxs #img {
+  margin: 0 auto;
+  margin-left: 210px; }

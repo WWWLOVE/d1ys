@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script type="text/javascript">
+         var $magPic=$("#magPic");
+         var $magRic=$("#magRic");
+         var $mag=$(".mag");
+         var $boxT=$(".boxT");
+         $(".ul1 li").mouseenter(function(){
+         //attr()添加属性
+           $magPic.attr("src",$(this).find("img").attr("src"));
+           $magRic.attr("src",$(this).find("img").attr("src"));
+         });
+
+
+
+          //鼠标点击左右两侧发生改变
+             var marginLeft=0;
+             $(".boxB .span2").on("click",function(){
+               marginLeft=marginLeft-63;
+               if(marginLeft<-252) marginLeft=-252;
+                 $(".boxB .ul1").css({"margin-left":marginLeft});
+             })
+             $(".boxB .span1").on("click",function(){
+               marginLeft=marginLeft+63
+               if(marginLeft>0) marginLeft=0;
+                 $(".boxB .ul1").css({"margin-left":marginLeft});
+            })
+
+
+
+             //放大镜效果
+            //offset()获取匹配元素在当前视口的相对偏移。，配合LEFT，与TOP使用、
+            //client获取适口的位置！
+            //outerWidth元素的宽度包含padding()和border()
+            var L=$boxT.eq(0).offset().left;
+            var T=$boxT.eq(0).offset().top;
+            var mag_width=$mag.outerWidth()/2;
+            var mag_height=$mag.outerHeight()/2;
+            var maxL=$boxT.width()-$mag.outerWidth();
+            var maxT=$boxT.height()-$mag.outerHeight();
+            var bili=$magRic.width()/$magPic.width();
+            $boxT.mousemove(function(e){
+              //document.title=e.clientX+","+e.clientY;
+              var magL=e.clientX-L-mag_width,magT=e.clientY-T-mag_height;
+              //行内判断可以用if这种语句、
+              if(magL<0)magL=0;
+              if(magT<0)magT=0;
+              if(magL>maxL)magL=maxL;
+              if(magT>maxT)magT=maxT;
+              $mag.css({"left":magL,"top":magT});
+
+              /*$(".Bright").show();
+              $(".mag").show();*/
+              //可修改为(合并选择器一起返回)
+              $(".Bright,.mag").show()
+              //右边显示层效果
+              $magRic.css({"margin-left":-magL*bili,"margin-top":-magT*bili})
+            });
+            $boxT.mouseleave(function(){
+              $(".Bright").hide();
+              $(".mag").hide();
+              $(".Bright,.mag").hide()
+            })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
