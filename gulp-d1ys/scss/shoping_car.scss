@@ -115,3 +115,55 @@
 		}
 	}
 }
+
+
+
+
+
+
+//  闭包样式
+	  #content {
+            position: fixed;
+            height: 100px;
+            width: 300px;
+            top:300px;
+            left:40%;
+            text-align:center;
+            margin-left:-100px;
+            border-radius: 5px;
+            background: #cdcdcd;
+            color: black;
+            line-height:80px;
+            margin: 50px auto;
+        }
+
+        #content #ok {
+            position: absolute;
+            height: 20px;
+            width: 40px;
+            bottom: 10px;
+            left: 130px;
+            background: #ff0000;
+            text-align: center;
+            line-height: 20px;
+            cursor: pointer;
+        }
+
+        #content #cancel {
+            position: absolute;
+            height: 20px;
+            width: 40px;
+            bottom: 10px;
+            left: 130px;
+            text-align: center;
+            line-height: 20px;
+            background: #009933;
+            cursor: pointer;
+        }
+
+        .hide {
+            display: none;
+        }
+        .show {
+            display: block;
+        }

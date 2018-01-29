@@ -55,10 +55,47 @@ define(["ballMove" ,  "jquery" , "jquery-cookie"] , function(ballMove , $){
 			});
 
 
+			//显示提示框的闭包
+			var singleton = (function(){
+				var oDiv = null;
+				var createDiv = function(){
+					if(!oDiv){
+
+						let html ="";
+						oDiv = $('<div id = "content"></div>');
+						html = 
+						`	该商品已加入购物车
+							<span id= "ok" >确认</span>
+						`; 
+						oDiv.html(html);
+						oDiv.appendTo($("body"));
+
+						$("#ok").click(function(){
+							$("#content").remove();
+							oDiv = null;
+						})
+
+					}
+
+				}
+				return createDiv;
+			})();
+
+
+
+
+
+
+
+
+
+
+
+
 
 			//商品列表购物车
 			$("#list_content").on("click" , ".detail_shop_car"  ,function(){
-				
+				singleton();
 				ballMove.ballMove(this);
 
 				let id = this.id;
@@ -107,7 +144,7 @@ define(["ballMove" ,  "jquery" , "jquery-cookie"] , function(ballMove , $){
 			
 
 
-			
+			//显示数量
 			function sc_car(){
 
 				var sc_str = $.cookie("goods");

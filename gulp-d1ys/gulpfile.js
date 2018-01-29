@@ -182,7 +182,7 @@ var connect = require("gulp-connect");
 gulp.task("server", function(){
 	connect.server({
 		root: "dist",
-		port: 8878,
+		port: 8888,
 		livereload: true //自动刷新
 	})
 })
